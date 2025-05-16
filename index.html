@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget & Estimator App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Budget & Estimator App</h1>
+
+        <div class="budget-form">
+            <input type="text" id="description" placeholder="Description">
+            <input type="number" id="amount" placeholder="Amount">
+            <select id="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <button onclick="addEntry()">Add</button>
+        </div>
+
+        <div class="budget-summary">
+            <div class="summary-box income-box">
+                <h3>Total Income</h3>
+                <p>$<span id="total-income">0</span></p>
+            </div>
+            <div class="summary-box expense-box">
+                <h3>Total Expense</h3>
+                <p>$<span id="total-expense">0</span></p>
+            </div>
+            <div class="summary-box balance-box">
+                <h3>Balance</h3>
+                <p>$<span id="balance">0</span></p>
+            </div>
+        </div>
+
+        <div class="transactions-section">
+            <h2>Transactions</h2>
+            <div id="transactions"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
